@@ -12,7 +12,7 @@ These are unofficial builds, not affiliated with or endorsed by the upstream pro
 docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/work" ghcr.io/randomcontainers/qpdf-ghostscript --empty --pages first.pdf second.pdf -- merged.pdf
 ```
 
-The same images can also be pulled as `randomcontainers.com/qpdf-ghostscript`. The examples in the [qpdf README](https://github.com/randomcontainers/qpdf#readme) work with this image too.
+The examples in the [qpdf README](https://github.com/randomcontainers/qpdf#readme) work with this image too.
 
 ## Tags
 
