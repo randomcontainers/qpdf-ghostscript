@@ -58,7 +58,7 @@ gh attestation verify oci://ghcr.io/randomcontainers/qpdf-ghostscript:latest \
   --repo randomcontainers/qpdf-ghostscript --signer-repo randomcontainers/ci
 ```
 
-Each image also has a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures:
+Images published since November 2026 also have a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures. Tags last built before then have only the attestation.
 
 ```sh
 cosign verify ghcr.io/randomcontainers/qpdf-ghostscript:latest \
@@ -67,7 +67,7 @@ cosign verify ghcr.io/randomcontainers/qpdf-ghostscript:latest \
   --certificate-github-workflow-repository randomcontainers/qpdf-ghostscript
 ```
 
-Images from `ghcr.io/randomcontainers/qpdf` are built in [randomcontainers/qpdf](https://github.com/randomcontainers/qpdf), so name that repository in `--repo` and `--certificate-github-workflow-repository`.
+Images from `ghcr.io/randomcontainers/qpdf` are built in [randomcontainers/qpdf](https://github.com/randomcontainers/qpdf), so use `randomcontainers/qpdf` in `--repo` and `--certificate-github-workflow-repository`.
 
 ## Updates
 
